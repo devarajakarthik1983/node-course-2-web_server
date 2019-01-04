@@ -47,6 +47,16 @@ res.render('home.hbs',{
 })
 });
 
+app.get('/project' , (req,res)=>{
+  // res.send('<H1>Hello Express!</H1>');
+
+res.render('project.hbs',{
+  currentYear: new Date().getFullYear(),
+  pageTitle: 'Home Page',
+  project: 'Project Page'
+})
+});
+
 app.get('/about',(req,res)=>{
   res.render('about.hbs', {
     pageTitle: 'About Page',
